@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch5asss.SqlQueryController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C70039;">
+         <children>
+            <HBox prefHeight="348.0" prefWidth="600.0">
+               <children>
+                  <TextArea fx:id="textArea" prefHeight="335.0" prefWidth="278.0" style="-fx-background-color: #C70039;" />
+                  <TableView fx:id="tableView" prefHeight="335.0" prefWidth="285.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="63.0" text="Id" />
+                      <TableColumn fx:id="nameColumn" prefWidth="61.0" text="Name" />
+                        <TableColumn fx:id="majorColumn" prefWidth="81.0" text="Major" />
+                        <TableColumn fx:id="gradeColumn" prefWidth="95.0" text="Grade" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="selectButton" alignment="CENTER" mnemonicParsing="false" onAction="#selectButtonHandle" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #FFC300;" text="Select query" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="7.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonHandle" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #FFC300;" text="Update query" textFill="#fffdfd">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</FlowPane>

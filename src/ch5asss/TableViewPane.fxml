@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch5asss.TableViewPaneController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="440.0" prefWidth="639.0" spacing="15.0" style="-fx-background-color: #C70039;">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" prefHeight="388.0" prefWidth="599.0" spacing="10.0">
+               <children>
+                  <GridPane hgap="10.0" maxHeight="-Infinity" prefHeight="161.0" prefWidth="267.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="93.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="140.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="ID:" textFill="#fcf7f7">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Name:" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Major" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Grade" textFill="WHITE" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtFieldID" onAction="#textFieldStudentIdHandle" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtFieldName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtFieldMajor" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtFieldGrade" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tableView" prefHeight="325.0" prefWidth="348.0" style="-fx-font-size: 14px;">
+                    <columns>
+                      <TableColumn fx:id="tcID" prefWidth="59.0" text="ID" />
+                      <TableColumn fx:id="tcName" prefWidth="90.0" text="Name" />
+                        <TableColumn fx:id="tcMajor" prefWidth="100.0" text="Major" />
+                        <TableColumn fx:id="tcGrade" prefWidth="84.0" text="Grade" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonHandle" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FFC300;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteAdd" mnemonicParsing="false" onAction="#deleteAddHandle" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FFC300;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonUpdate" mnemonicParsing="false" onAction="#buttonUpdateHandle" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FFC300;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonAddCourse" mnemonicParsing="false" onAction="#addCourseHandle" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #FFC300;" text="Add course" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="sqlStatement" mnemonicParsing="false" onAction="#sqlHandle" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FFC300;" text="Sql" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>
